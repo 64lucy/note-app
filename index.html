@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+    <header>
+      <h1> 📝 Notes App</h1>
+      <p> Capture your thoughts anytime.</p>
+    </header>
+
+    <div class="section">
+      <label for="searchInput">Search Notes</label>
+      <input type="text" id="searchInput" placeholder="🔍 Search notes...">
+    </div>
+
+    <div class="section">
+      <label for="filterCategory">Filter Category</label>
+      <select id="filterCategory">
+        <option value="ALL">🌍 All Categories</option>
+        <option value="Work">💼Work</option>
+        <option value="Personal">🏘️Personal</option>
+        <option value="School">📚School</option>
+        <option value="Ideas">💡Ideas</option>
+        <option value="Others">🗂️Others</option>
+      </select>
+    </div>
+    <form id="noteForm">
+
+      <div class="section">
+        <label for="titleInput">Title</label>
+        <input type="text" id="titleInput" placeholder="Title">
+      </div>
+
+      <div class="section">
+        <label for="noteInput">Note</label>
+        <textarea id="noteInput" placeholder="Write your notes..."></textarea>
+      </div>
+
+      <div class="action-row">
+        <div class="pin-section">
+          <label>
+            <input type="checkbox" id="pinInput"> 📌 Pin Note
+          </label>
+        </div>
+
+        <div class="select">
+          <label for="categoryInput"></label>
+          <select id="categoryInput">
+            <option value="" selected disabled> 🌍Choose Category</option>
+            <option value="Work">💼 Work</option>
+            <option value="Personal"> 🏘️Personal</option>
+            <option value="School"> 📚School</option>
+            <option value="Ideas">💡Ideas</option>
+            <option value="Others"> 🗂️Others</option>
+
+          </select>
+        </div>
+
+        <div class="section">
+          <button id="addButton" type="submit">💾 Save Note</button>
+        </div>
+      </div>
+    </form>
+
+    <h2>Your Notes (<span id="noteCount">0</span>) </h2>
+    <ul id="notesList"></ul>
+
+  </main>
+  <footer>
+    <p>Designed & Developed by Lucy Murage 🚀 © 2026</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

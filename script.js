@@ -42,7 +42,7 @@ noteForm.addEventListener("submit", function (event) {
    clearInputs();
    alert("✅ Note saved successfully!");
 });
-// clear inputs
+
 function clearInputs() {
    titleInput.value = "";
    noteInput.value = "";
@@ -51,7 +51,7 @@ function clearInputs() {
 }
 
 
-// ctrl + Enter shortcut
+
 noteInput.addEventListener("keydown", function (event) {
 
    if (event.ctrlKey && event.key === "Enter") {
@@ -92,7 +92,7 @@ function renderNotes(noteArray) {
    noteArray.sort(function (a, b) {
       return b.pin - a.pin;
    });
-   // sort the notes
+   
 
 
    notesList.innerHTML = "";
@@ -100,7 +100,7 @@ function renderNotes(noteArray) {
       notesList.innerHTML = "<p class='empty-message'>📝 No notes yet.Create your first note!</p>"
       return;
    }
-   // display the notes
+   
    noteArray.forEach(function (note, index) {
       const li = document.createElement("li");
 
@@ -108,7 +108,7 @@ function renderNotes(noteArray) {
          li.classList.add("pinned");
       }
 
-      // display title and note
+      
       li.innerHTML = `
  <h3>${note.pin ? "📌" : ""}${note.title}</h3>
  <p>${note.note} </p>
@@ -128,7 +128,7 @@ function renderNotes(noteArray) {
          noteInput.value = note.note;
          categoryInput.value = note.category;
          pinInput.checked = note.pin;
-         //update the counter
+         
          const realIndex = notes.indexOf(note);
          notes.splice(realIndex, 1);
          localStorage.setItem("notes", JSON.stringify(notes));
